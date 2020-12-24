@@ -1,85 +1,89 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;600;884;900&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
     <title>COVID Map</title>
     <style>
       body {
         background: white;
         overflow-x: hidden;
         overflow-y: auto;
+        font-family: Raleway !important;
       }
       .data {
         display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-columns: auto;
         text-align: center;
-        font-family: Raleway !important;
+        font-family: Raleway;
+      }
+      #IN-TN{
+        stroke: red;
+        stroke-width: 4;
       }
       .active {
-        color: red;
+        color: darkred;
       }
       .confirmed {
-        color: orange;
+        color: darkorange;
       }
       .recod {
-        color: greenyellow;
+        color: darkgreen;
       }
       .died {
-        color: cyan;
+        color: brown;
       }
       .caseFigActive,
       .caseFigConfirmed,
       .caseFigRecod,
       .caseFigDied {
-        font-size: 23px;
+        font-size: 21px;
       }
       svg {
-        height: 670px;
-        width: 100%;
-      }
-      .india {
-        text-align: center;
-        font-family: Raleway !important;
-        font-size: 15px;
-        color: black;
-        margin-bottom: 0px;
+        height: 600px;
+        width: 220%;
       }
       .state-name {
         text-align: center;
-        font-family: Raleway !important;
-        font-size: 23px;
+        font-family: Raleway;
+        font-size: 22px;
         color: black;
         margin-bottom: 0px;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="india"> <b>COVID Statstics India (LIVE)</b></div>
-      <div class="state-name">...</div>
+  	<div style="position: fixed; bottom: 10px; color:black; font-weight: 600; font-family: Raleway">
+  	<center><small> We are only providing services in the highlighted parts on the map ! </center></small></div>
+    <div class="container" style="position: fixed; top: 18%; left: 78%;">
+      <div class="state-name" style="font-family: Raleway ;font-weight:900; font-size: 26px; position: fixed; left: 60%; top: 18%">...</div><br>
+      <br>
       <div class="data">
         <div class="active">
-          <div class="caseActive">Active</div>
-          <div class="caseFigActive">...</div>
+          <div class="caseActive" style="font-size: 24px; position: fixed; left: 60%; top: 25%"><b>Population</div></b>
+          <div class="caseFigActive" style="font-size: 24px; position: fixed; left: 78%; top: 25%">...</div>
+        </div><br>
+        <div class="confirmed" style="font-size: 24px">
+          <div class="caseConfirmed" style="font-size: 24px; position: fixed; left: 60%; top: 32%"><b>Area</div></b>
+          <div class="caseFigConfirmed" style="font-size: 24px; position: fixed; left: 78%; top: 32%">...</div>
+
+        </div><br>
+
+        <div class="recod" style="font-size: 24px">
+          <div class="caseRecod" style="font-size: 24px; position: fixed; left: 60%; top: 39%"><b>Immunisation</div></b>
+          <div class="caseFigRecod" style="font-size: 24px; position: fixed; left: 78%; top: 39%">...</div>
         </div>
-        <div class="confirmed">
-          <div class="caseConfirmed">Confirmed</div>
-          <div class="caseFigConfirmed">...</div>
-        </div>
-        <div class="recod">
-          <div class="caseRecod">Recovered</div>
-          <div class="caseFigRecod">...</div>
-        </div>
-        <div class="died">
-          <div class="caseDied">Died</div>
-          <div class="caseFigDied">...</div>
+        <div class="died" style="font-size: 24px"><br>
+          <div class="caseDied" style="font-size: 24px; position: fixed; left: 60%; top: 46%"><b>Hospitals</div></b>
+          <div class="caseFigDied" style="font-size: 24px; position: fixed; left: 78%; top: 46%">...</div>
         </div>
       </div>
 
-      <div class="map">
+      <div class="map" style="position: fixed; top: -25px; left: 0%;">
         <?xml version="1.0" encoding="utf-8"?>
         <!-- (c) ammap.com | SVG map of India - High -->
         <svg
@@ -92,7 +96,7 @@
           <defs>
             <style type="text/css">
               .land {
-                fill: #cccccc21;
+                fill: #fafafa;
                 fill-opacity: 1;
                 stroke: #777;
                 stroke-opacity: 1;
@@ -109,7 +113,7 @@
             ></amcharts:ammap>
 
             <!-- All areas are listed in the line below. You can use this list in your script. -->
-            <!--{id:"IN-AN"},{id:"IN-AP"},{id:"IN-AR"},{id:"IN-AS"},{id:"IN-BR"},{id:"IN-CH"},{id:"IN-CT"},{id:"IN-DD"},{id:"IN-DL"},{id:"IN-DN"},{id:"IN-GA"},{id:"IN-GJ"},{id:"IN-HP"},{id:"IN-HR"},{id:"IN-JH"},{id:"IN-JK"},{id:"IN-KA"},{id:"IN-KL"},{id:"IN-LD"},{id:"IN-MH"},{id:"IN-ML"},{id:"IN-MN"},{id:"IN-MP"},{id:"IN-MZ"},{id:"IN-NL"},{id:"IN-OR"},{id:"IN-PB"},{id:"IN-PY"},{id:"IN-RJ"},{id:"IN-SK"},{id:"IN-TG"},{id:"IN-TN"},{id:"IN-TR"},{id:"IN-UP"},{id:"IN-UT"},{id:"IN-WB"}-->
+            <!--{id:"IN-AN"},{id:"IN-AP"},{id:"IN-AR"},{id:"IN-AS"},{id:"IN-BR"},{id:"IN-CH"},{id:"IN-CT"},{id:"IN-DD"},{id:"IN-DL"},{id:"IN-DN"},{id:"IN-GA"},{id:"IN-GJ"},{id:"IN-HP"},{id:"IN-HR"},{id:"IN-JH"},{id:"IN-JK"},{id:"IN-KA"},{id:"IN-KL"},{id:"IN-LD"},{id:"IN-MH"},{id:"IN-ML"},{id:"IN-MN"},{id:"IN-MP"},{id:"IN-MZ"},{id:"IN-NL"},{id:"IN-OR"},{id:"IN-PB"},{id:"IN-PY"},{id:"IN-RJ"},{id:"IN-SK"},{id:"IN-TG"},{id:"IN-"},{id:"IN-TR"},{id:"IN-UP"},{id:"IN-UT"},{id:"IN-WB"}-->
           </defs>
           <g>
             <path
@@ -242,7 +246,7 @@
             />
             <path
               id="IN-KA"
-              onmouseout="document.querySelector('#IN-KA').style.strokeWidth='4';document.querySelector('#IN-KA').style.stroke='#777';"
+              onmouseout="document.querySelector('#IN-KA').style.strokeWidth='2';document.querySelector('#IN-KA').style.stroke='#777';"
               onmouseover="document.querySelector('#IN-KA').style.stroke='tomato';document.querySelector('#IN-KA').style.strokeWidth='4';showMapData('Karnataka')"
               title="Karnataka"
               class="land"
@@ -250,7 +254,7 @@
             />
             <path
               id="IN-KL"
-              onmouseout="document.querySelector('#IN-KL').style.strokeWidth='4';document.querySelector('#IN-KL').style.stroke='#777';"
+              onmouseout="document.querySelector('#IN-KL').style.strokeWidth='4';document.querySelector('#IN-KL').style.stroke='green';"
               onmouseover="document.querySelector('#IN-KL').style.stroke='tomato';document.querySelector('#IN-KL').style.strokeWidth='4';showMapData('Kerala')"
               title="Kerala"
               class="land"
@@ -258,11 +262,11 @@
             />
             <path
               id="IN-LD"
-              onmouseout="document.querySelector('#IN-LD').style.strokeWidth='4';document.querySelector('#IN-LD').style.stroke='#777';"
+              onmouseout="document.querySelector('#IN-LD').style.strokeWidth='2';document.querySelector('#IN-LD').style.stroke='#777';"
               onmouseover="document.querySelector('#IN-LD').style.stroke='tomato';document.querySelector('#IN-LD').style.strokeWidth='4';showMapData('Lakshadweep')"
               title="Lakshadweep"
               class="land"
-              d="M102.338,759.383l-0.04,0.466l-0.372,0.397l-0.373,0.005l-0.268,-0.104l-0.011,-0.129l0.116,0.105l0.36,-0.029l0.308,-0.181L102.338,759.383zM114.532,721.533l-0.076,0.91l-0.128,0.088l-0.134,-0.317l0.116,0.018l0.087,-0.135L114.532,721.533zM86.825,720.854l0.081,0.245l-0.122,-0.041L86.825,720.854zM114.73,720.442l0.087,0.3l-0.064,0.251L114.73,720.442zM93.401,711.533l0.151,0.111l-0.006,0.218l-0.704,0.445L93.401,711.533zM115.096,706.364l-0.029,0.083l0.534,0.059l-0.622,0.218l-0.227,-0.082l-0.011,-0.194L115.096,706.364zM83.574,706.4l0.343,-0.624l0.11,-0.453l0.134,-0.147l0.122,0.006L83.574,706.4zM86.057,703.729l-0.064,0.047l0.058,0.159l-0.14,0.018l0.029,-0.2L86.057,703.729zM86.795,703.576l-0.273,0.211l0.029,-0.111L86.795,703.576zM95.273,699.696l0.029,0.177l-9.268,9.365l-0.104,-9.13l0.018,-9.177L95.273,699.696zM82.114,698.024l0.029,0.053l-0.087,-0.035L82.114,698.024zM96.5,697.076l-0.25,0.901l-0.354,0.789l0.349,-1.29L96.5,697.076zM100.89,692.025l0.192,0.224l0.052,0.336l-0.082,0.083l-0.122,-0.507l-0.105,-0.083L100.89,692.025zM83.859,689.832l0.058,0.112l-0.087,-0.029L83.859,689.832zM94.907,687.602l0.053,0.301l-0.245,0.242L94.907,687.602z"
+              d="M102.338,759.383l-0.04,0.466l-0.372,0.397l-0.373,0.005l-0.268,-0.104l-0.011,-0.129l0.116,0.105l0.36,-0.029l0.308,-0.181L102.338,759.383zM114.532,721.533l-0.076,0.91l-0.128,0.088l-0.134,-0.317l0.116,0.018l0.087,-0.135L114.532,721.533zM86.825,720.854l0.081,0.245l-0.122,-0.041L86.825,720.854zM114.73,720.442l0.087,0.3l-0.064,0.251L114.73,720.442zM93.401,711.533l0.151,0.111l-0.006,0.218l-0.704,0.445L93.401,711.533zM115.096,706.364l-0.029,0.083l0.534,0.059l-0.622,0.218l-0.227,-0.082l-0.011,-0.194L115.096,706.364zM83.574,706.4l0.343,-0.624l0.11,-0.453l0.134,-0.147l0.122,0.006L83.574,706.4zM86.057,703.729l-0.064,0.047l0.058,0.159l-0.14,0.018l0.029,-0.2L86.057,703.729zM86.795,703.576l-0.273,0.211l0.029,-0.111L86.795,703.576zM95.273,699.696l0.029,0.177l-0.268,0.365l-0.104,-0.13l0.018,-0.177L95.273,699.696zM82.114,698.024l0.029,0.053l-0.087,-0.035L82.114,698.024zM96.5,697.076l-0.25,0.901l-0.354,0.789l0.349,-1.29L96.5,697.076zM100.89,692.025l0.192,0.224l0.052,0.336l-0.082,0.083l-0.122,-0.507l-0.105,-0.083L100.89,692.025zM83.859,689.832l0.058,0.112l-0.087,-0.029L83.859,689.832zM94.907,687.602l0.053,0.301l-0.245,0.242L94.907,687.602z"
             />
             <path
               id="IN-MH"
@@ -346,7 +350,7 @@
             />
             <path
               id="IN-TN"
-              onmouseout="document.querySelector('#IN-TN').style.strokeWidth='2';document.querySelector('#IN-TN').style.stroke='#777';"
+              onmouseout="document.querySelector('#IN-TN').style.strokeWidth='4';document.querySelector('#IN-TN').style.stroke='blue';"
               onmouseover="document.querySelector('#IN-TN').style.stroke='tomato';document.querySelector('#IN-TN').style.strokeWidth='4';showMapData('Tamil Nadu')"
               title="Tamil Nadu"
               class="land"
@@ -404,10 +408,12 @@
         </svg>
       </div>
     </div>
+
     <script>
+      showMapData("Total");
       function showMapData(stateName) {
         console.log(stateName);
-        fetch("https://api.covid19india.org/data.json")
+        fetch("https://karanarora-madrasmed.github.io/data/db.json")
           .then((e) => {
             return e.json();
           })
@@ -416,17 +422,18 @@
               if (data.statewise[i].state == stateName) {
                 document.querySelector(".state-name").innerHTML = stateName;
                 document.querySelector(".caseFigActive").innerHTML =
-                  data.statewise[i].active;
+                  data.statewise[i].population;
                 document.querySelector(".caseFigConfirmed").innerHTML =
-                  data.statewise[i].confirmed;
+                  data.statewise[i].size;
                 document.querySelector(".caseFigRecod").innerHTML =
-                  data.statewise[i].recovered;
+                  data.statewise[i].immunisation;
                 document.querySelector(".caseFigDied").innerHTML =
-                  data.statewise[i].deaths;
+                  data.statewise[i].healthcenters;
               }
             }
           });
       }
     </script>
+
   </body>
 </html>
